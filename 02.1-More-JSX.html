@@ -1,0 +1,26 @@
+<body>
+  <div id="root"></div>
+  <script crossorigin src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+  <script type="text/babel">
+    const rootElement = document.getElementById('root')
+
+    function formatName(user) {
+      return user.firstName + ' ' + user.lastName
+    }
+
+    const user = {
+      firstName: 'Mohammed',
+      lastName: 'Zeeshan'
+    }
+
+    const element = (
+      <h1>
+        Hello, {formatName(user)}!
+        </h1>
+    )
+
+    ReactDOM.render(element, rootElement)
+  </script>
+</body>
