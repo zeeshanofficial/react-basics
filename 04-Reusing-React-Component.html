@@ -4,10 +4,13 @@
   <script crossorigin src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
   <script type="text/babel">
-    const element = <><span>Hello</span> <span>World</span></>
-    // const helloElement = React.createElement('span', null, 'Hello')
-    // const worldElement = React.createElement('span', null, 'World')
-    // const element = React.createElement(React.Fragment, null, helloElement, ' ', worldElement )
+    const Message = props => <div className="username">{props.children}</div>
+    const element = (
+      <div className="container">
+        <Message>Mohammed Zeeshan</Message>
+        <Message>Mohammed Zayeesh</Message>
+      </div>
+    )
 
     ReactDOM.render(element, document.getElementById('root'))
   </script>
