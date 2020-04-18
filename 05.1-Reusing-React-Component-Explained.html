@@ -1,0 +1,30 @@
+<body>
+  <div id="root"></div>
+  <script crossorigin src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+  <script type="text/babel">
+    function Welcome(props) {
+      return <h1>Assalamu 'alaikum, {props.name}</h1>;
+    }
+
+    function App() {
+      return (
+        <div>
+          <Welcome name="Mohammed" />
+          <Welcome name="Haneef" />
+          <Welcome name="Thahira" />
+        </div>
+      );
+    }
+
+    ReactDOM.render(
+      <App />,
+      document.getElementById('root')
+    );
+  </script>
+</body>
+
+
+
+//npx browser-sync start --server --files "./*.html" --no-open --no-notify --directory
